@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pick your playlist</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=divice-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+	    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    </head>
+
+    <style>
+        a {text-decoration:none; color:#000;}
+        a:link {text-decoration: none;}
+        a:visited {text-decoration: none;}
+        a:hover { text-decoration: none; color:#da5f26; font-weight:500;}
+        a:active {text-decoration: none;}
+        ul,ol,li {list-style:none;}
+        img,fieldset {border:none; vertical-align:middle;}
+        strong,em,address {font-weight:normal; font-style:normal;}
+        table {border-collapse:collapse;}
+        ul {padding:0px !important}
+        input {margin:0; padding:0; margin:0 auto; text-decoration:none;}
+        
+        body {
+            margin:0;
+            padding:0;
+            margin:0px auto;
+        }
+        
+        .navbar-nav li a:hover { color: #AF95D3 !important; }
+        .navbar {
+        padding-top: 5px;
+        padding-bottom: 10px;
+        border: 0;
+        border-radius: 0;
+        margin-bottom: 0;
+        background-color: #ffffff;
+        }
+        
+        
+        .id {
+        background-color: #D6BFDD;
+        }
+        .page {
+            width:1170px;
+            margin: 0 auto;
+        }
+        .bg-1 {
+            background-color: #ffffff;  
+            color: #222831;
+            line-height: 100%;
+        }
+        
+        
+        
+        .nav_icon {float:right;}
+        .cate_meu {
+            float:left;
+            padding-top:4px;
+            padding-bottom:15px;
+            margin:0 60px;
+        }
+        #infor {
+            background-color:#f9f9f9;
+            padding-top:30px;
+            margin:0 auto;
+        }
+        .infor {
+            width:1170px;
+            margin:0 auto;
+            margin-bottom:100px;
+            line-height:18px;
+            font-size:12px;
+        }
+
+        .copyright {
+            background-color: #f66818;
+            text-align:center;
+            color: #ffffff;
+            padding:15px 0;
+            font-size:8px;
+        }
+        
+        .container-fluid {
+            padding-top: 70px;
+        }
+        p {
+            font-size: 16px;
+        }
+        .margin {
+            margin-bottom: 45px;
+        }
+        .body {
+            width: 1170px;
+            font:20px, "Montserrat", sans-serif;
+            margin: 0;
+            padding: 0;
+            margin:0px auto;
+        }
+        select {
+            width: 70%;
+            height: 45px;
+            float: right;
+        }
+        
+        input { width: 60%; padding:15px; margin: 5px 0; box-sizing: border-box;  }
+        button { width: 60%; padding: 15px; margin: 5px; box-sizing: border-box; }
+        
+    </style>
+    
+    <body>
+       
+        <div class="mainpage">
+            <div id="Header" style="width:1170px; margin:0 auto;">
+                <!-- HEAD logo -->
+                <div class="navbar-header">
+                <a class="navbar-brand" href="https://ykykkim.github.io">
+                    <img src="playlistlogo.jpg" style="width:245px; margin:0px 15px; display: block; position:relative;" alt="Image">
+                </a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                    
+            </div>
+                <!-- 네비바 아이콘 -->
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <div class="right-container" style="width:300px; margin:50px 15px; ">
+                            <li class="nav_icon"><a href="#"><img src="play_my.png" stlye=""alt="Image"></a></li>
+                            <li class="nav_icon" style="margin:0 10%;"><span><img src="play_bar.png"></span></li>
+                            <li class="nav_icon"><a href="#"><img src="play_heart.png" alt="Image"></a></li>
+                            <li class="nav_icon" style="margin:0 10%;"><span><img src="play_bar.png"></span></li>
+                            <li class="nav_icon"><a href="#"><img src="play_search.png" alt="Image"></a></li>
+                        </div>
+                    </ul>
+                </div>
+                </div>
+            
+            <!-- 카테고리 -->
+            <div id="Cate" style="clear:both;">
+            
+                <hr style="width:100%; height:1px; border:none; background-color:#ddd; margin-top:80px;" />
+                
+                <div class="cate_menu"  style="width:1170px; margin:0 auto; ">
+                    <ul style="width:1170px; font-size:25px; " >
+                        <li class="cate_meu"><a href="#"><span style="color:#da5f26;"><b>ALL</b></span></a></li>
+                        <li class="cate_meu"><a href="#">NEW</a></li>
+                        <li class="cate_meu"><a href="#">BEST</a></li>
+                        <li class="cate_meu"><a href="#">K-POP</a></li>
+                        <li class="cate_meu"><a href="#">POP</a></li>
+                        <li class="cate_meu"><a href="#">J-POP</a></li>
+                    </ul>
+                </div>
+                
+                <hr style="width:100%; height:1px; border:none; background-color:#ddd; margin-top:80px; margin-bottom:0;" />
+            
+            </div>
+            
+            
+            <!-- 로그인 페이지  -->
+            
+            <div class="container-fluid bg-1 text-center" style="margin-top:50px; margin-bottom:70px;">
+                <p style="font-size:35px; margin-bottom:35px; font-weight:500;"><span style="color: #da5f26; line-height:80px;"><b>8월 신규회원</b></span><br>환영 이벤트</p>
+                <p style="font-size:18px; color: #474747; line-height:28px;"> 당신의 취향을 더 담고 싶다면? <br>지금 당장 로그인 하세요! </p>
+            </div>
+            
+            <div class="text-center" style="width:820px; margin:0 auto; margin-bottom:80px;">
+                <form name = "frm" style="margin:5px;">
+                    <!-- <input type="text" id="username" name="username" value="아이디 입력" style="border: solid 1px #dddddd;"><br>  
+                    <input type="password" id="pwd" name="pwd" value="비밀번호 입력" style="border: solid 1px #dddddd;"><br> -->
+
+                    
+                    <input type="text" id="myId" name="myId" value="아이디 입력" style="border: solid 1px #dddddd;"/>
+                    <input type="password" id="pwd" name="pwd" value="비밀번호 입력" style="border: solid 1px #dddddd;"/>
+                        
+                    <input type="button" name="send" value="로그인" style="background-color: #da5f26; color:#ffffff; border: solid 1px #da5f26;"/>
+                    <input type="button" name="sign" value="회원가입" onclick="alert('다음에 도와드릴게요~')" style="background-color: #ffffff; border: solid 1px #b3b3b3;"/>
+                    
+                    <script>
+                        var frm = document.frm;             // form 객체 지정
+                        var myId = frm.myId;                // id 입력란(myId) 객체 지정
+                        var pwd = frm.pwd;
+                        var send_btn = document.frm.send;   // 전송 버튼 객체 지정
+                
+                        send_btn.onclick = function(){
+                          var newId = myId.value,
+                              newPwd = pwd.value;
+                          
+                          // 빈값 검사
+                          if(newId == '' || newPwd == ''){
+                            alert('아이디 또는 비밀번호가 입력되지 않았습니다!');
+                          } else{
+                            alert(myId.value + '님 환영합니다!');
+                          }  
+                        };
+                        
+                    </script>
+                    
+                    <p style="margin-top:20px; font-size:12px;">
+                        <a href="#">아이디 찾기</a> <span style="margin:0 10px;"> | </span> <a href="#">비밀번호 찾기</a>                     
+                    </p> 
+                     
+                    <hr style="width:100%; height:1px; border:none; background-color:#ddd;" >
+                    <br>
+                    <p style="font-size: 15px;"><b>간편로그인 / 가입</b></p>
+                    <button type="button" onclick="alert('다음에 도와드릴게요~')" style="width:30%; background-color:#3c659f; color:#ffffff; border: solid 1px #3c659f; border-radius: 8px; ">
+                    <img src="facebook.png" style="float:center; width:8%; margin-right: 4%; margin-bottom: 1%;" alt="Image">Facebook으로 계속하기
+                    </button>
+                    <button type="button" onclick="alert('다음에 도와드릴게요~')" style="width:30%; background-color: #ffffff; border: solid 1px #b3b3b3; border-radius: 8px;">
+                    <img src="google.png" style="float:center; width:8%; margin-right: 4%; margin-bottom: 1%;" alt="Image">Google계정으로 계속하기</button><br>
+                    <button type="button" onclick="alert('다음에 도와드릴게요~')" style="width:30%; background-color: #ffffff; border: solid 1px #b3b3b3; border-radius: 8px;">
+                    <img src="apple.png" style="float:center; width:7%; margin-right: 4%; margin-bottom: 1%;" alt="Image">Apple로 계속하기</button>
+                </form>
+            </div>
+            
+            <!-- 하단 정보 -->
+            <div id="infor">
+                <div class="infor">
+                       
+                    <div class="infor01">
+                        <h1 style="font-size:30px; font-weight:800;">고객센터 <span style="font-weight:700;">080-822-1450</span></h1>
+                        <p style="font-size:12px;">영업시간 : AM 9:00 ~ PM 18:00 (주말 및 공휴일 휴무) <br>점심시간 : PM 13:30 ~ PM 14:30</p>
+                    </div>
+                     
+                    <hr style="width:1170px; height:0.5px; border:none; background-color:#ddd; margin-top:25px; margin-bottom:25px;" />
+                       
+                    <div class="infor02">
+                        <p style="font-size:12px;">
+                            ㈜유튜브  
+                            <br/>
+                            주소 : 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA.
+                        </p>
+                        <p style="margin-top:20px; font-size:12px;">
+                            <a href="#" style="font-weight:600;">이용약관</a> <span style="margin:0 10px;"> | </span> <a href="#"  style="font-weight:600;">개인정보정책</a> <span style="margin:0 10px;"> | </span> <a href="#"  style="font-weight:600;">전자금융거래이용약관</a>                       
+                        </p> 
+                    </div>
+                    
+                </div>
+                
+                <div class="container-fluid copyright text-center" style="padding:15px 0;">
+                    <p style="font-size:10px; margin:0;">Copyright © yuu2uuy. All rights reserved.</p>
+                </div>
+            </div>
+            
+        </div>
+        
+    </body>
+</html>
